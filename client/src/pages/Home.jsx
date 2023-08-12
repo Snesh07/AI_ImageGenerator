@@ -18,7 +18,7 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [allPosts, setAllPosts] = useState(null);
 
-  const [searchText, setSearchText] = useState(" ");
+  const [searchText, setSearchText] = useState("");
 
   return (
     <section className="max-w-7xl mx-auto">
@@ -51,7 +51,17 @@ const Home = () => {
             )}
 
             <div className="grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-1 gap-3">
-
+              {searchText ? (
+                <RenderCards
+                  data={[]}
+                  title="No search results found."
+                />
+              ) : (
+                <RenderCards 
+                  data={[]}
+                  title="No posts found"
+                />
+              )}
             </div>
           </>
         )}
