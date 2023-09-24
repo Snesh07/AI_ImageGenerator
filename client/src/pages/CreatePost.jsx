@@ -51,7 +51,7 @@ const CreatePost = () => {
         setLoading(true);
 
         try {
-          const response = await fetch("https://api.openai.com/v1/images/generations",
+          const response = await fetch("https://localhost:8080/api/v1/post",
           {
             method: 'POST',
             headers: {
